@@ -1,0 +1,38 @@
+.new-post {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.new-post__text {
+  padding: 45px 20px;
+  line-height: 30px;
+  color: @text-dark-blue;
+  text-align: center;
+}
+
+.post-form {
+  background-color: @bg-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .new-post {
+    width: 660px;
+  }
+
+  .new-post__text {
+    padding: 57px 20px;
+    font-size: 18px;
+  }
+
+  .post-form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .new-post {
+    width: 940px;
+    margin-bottom: 29px;
+  }
+}

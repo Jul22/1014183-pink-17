@@ -2,6 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
+  max-width: 280px;
+  min-height: 210px;
+  margin: 0 auto;
+  padding-top: 425px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 173px;
+    left: -8%;
+
+    width: 258px;
+    height: 286px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
 }
 
 .download__button {
@@ -30,12 +51,7 @@
   margin-bottom: 25px;
 }
 
-.download__item {
-  .reset;
-}
-
 .download__text {
-  .reset;
   padding-bottom: 32px;
   width: 230px;
 

@@ -7,7 +7,8 @@
   }
 
   &--best {
-    &::after {
+    padding: 0;
+      &::after {
       content: "Панорама дня";
       position: absolute;
       top: 0;
@@ -28,17 +29,24 @@
 
 .user-post__picture {
   display: block;
-  margin: 0 auto;
+  &--best {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .user-post__caption {
-  margin: 0 20px;
+  width: 280px;
+  padding: 18px;
+  box-sizing: border-box;
 
   background-color: @bg-grey;
+  &--best {
+    margin: 0 auto;
+  }
 }
 
 .user-post__author {
-  padding: 20px 0 0 18px;
   margin: 0;
 
   font-weight: 700;
@@ -52,15 +60,44 @@
   font-weight: 400;
 }
 
-.user-post__text {
-  .reset;
-  padding-left: 18px;
-}
-
 .user-post__like {
   padding-left: 50px;
 
   color: #d22856;
   font-size: 12px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .user-post {
+    width: 300px;
+    &--best {
+      width: 100%;
+      margin-bottom: 52px;
+      &::after {
+        top: 58px;
+      }
+    }
+  }
+  .user-post__caption {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 155px;
+    margin: 0;
+    padding: 25px 27px;
+    &--best {
+      margin: 0 auto;
+      width: 620px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-post--best {
+    width: auto;
+  }
+  .user-post {
+    margin-bottom: 54px;
+  }
 }

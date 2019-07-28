@@ -1,14 +1,55 @@
 .header {
-  .center;
-
   color: @text-white;
   background-color: @bg-dark-blue;
 }
 
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+
 .header__logo-block {
   display: flex;
   justify-content: space-between;
-  padding: 22px 20px 25px;
+  padding: 20px 20px 24px;
+  width: 280px;
+  margin: 0 auto;
+}
 
-  border-bottom: 1px solid #000000;
+@media (min-width: @tablet-width) {
+  .header__logo-block {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .header--index {
+    background-position: center 0;
+  }
+
+  .header__menu {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  .header__toggle {
+    display: none;
+  }
 }
