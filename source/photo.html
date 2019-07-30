@@ -118,27 +118,29 @@
         </div>
     </section>
 
-  <section class="new-post">
+  <section class="new-post container">
     <h2 class="visually-hidden">Добавьте свой пост</h2>
     <p class="new-post__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
     <form class="post-form" action="https://echo.htmlacademy.ru." method="post">
       <img class="post-form__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фото">
-      <div class="post-form__filters">
-        <input type="radio" id="filter1" name="filter1" checked>
-        <label class="post-form__filter-toggle" for="filter1"></label>
-        <input type="radio" id="filter2" name="filter1">
-        <label class="post-form__filter-toggle" for="filter2"></label>
-        <input type="radio" id="filter3" name="filter1">
-        <label class="post-form__filter-toggle" for="filter3"></label>
-      </div>
-      <div class="post-form__editing">
-        <input class="post-form__range" type="range" id="range-filter1" name="range-filter">
-        <input class="post-form__range" type="range" id="range-filter2" name="range-filter">
-        <input class="post-form__range" type="range" id="range-filter3" name="range-filter">
-      </div>
-      <div class="post-form__submit-wrapper">
-        <button class="post-form_button post-form_button--post" type="submit">Запостить</button>
-        <button class="post-form_button post-form_button--reset" type="reset">Отмена</button>
+      <div class="post-form__filters-wrapper">
+        <div class="post-form__filters">
+          <input type="radio" id="filter1" name="filter1" checked>
+          <label class="post-form__filter-toggle" for="filter1"></label>
+          <input type="radio" id="filter2" name="filter1">
+          <label class="post-form__filter-toggle" for="filter2"></label>
+          <input type="radio" id="filter3" name="filter1">
+          <label class="post-form__filter-toggle" for="filter3"></label>
+        </div>
+        <div class="post-form__editing">
+          <input class="post-form__range" type="range" id="range-filter1" name="range-filter">
+          <input class="post-form__range" type="range" id="range-filter2" name="range-filter">
+          <input class="post-form__range" type="range" id="range-filter3" name="range-filter">
+        </div>
+        <div class="post-form__submit-wrapper">
+          <button class="post-form__button post-form__button--post" type="submit">Запостить</button>
+          <button class="post-form__button post-form__button--reset" type="reset">Отмена</button>
+        </div>
       </div>
     </form>
   </section>
