@@ -1,0 +1,88 @@
+.new-post {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.new-post__text {
+  padding: 45px 20px;
+  line-height: 30px;
+  color: @text-dark-blue;
+  text-align: center;
+}
+
+.post-form {
+  background-color: @bg-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .new-post {
+    width: 660px;
+  }
+
+  .new-post__text {
+    padding: 57px 20px;
+    font-size: 18px;
+  }
+
+  .post-form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .new-post {
+    width: 940px;
+    margin-bottom: 29px;
+  }
+
+  .post-form__filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 410px;
+    margin-right: 60px;
+  }
+
+  .post-form__editing {
+    width: 318px;
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .post-form__submit-wrapper {
+    width: 410px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post-form__filters {
+    width: 86px;
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .post-form__button {
+    padding: 12px 0;
+    width: 183px;
+
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: @text-pink;
+
+    border-radius: 14px;
+    border: 3px solid @bg-pink;
+    background-color: @bg-grey;
+
+    &--reset {
+      border-color: #dddfe0;
+      color: #dddfe0;
+    }
+  }
+}

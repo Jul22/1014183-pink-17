@@ -1,15 +1,35 @@
-.intro__wrapper {
-  min-height: 170px;
-
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 22%;
+.intro {
+  padding-top: 0;
 
   &--index {
-    min-height: 395px;
-    background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: left bottom, center;
+    position: relative;
+    padding-top: 365px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      right: 19%;
+      bottom: 268px;
+
+      width: 258px;
+      height: 286px;
+
+      background-image: url("../img/iphone-hand-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
+}
+
+.intro__wrapper {
+  min-height: 165px;
+  background-color: transparent;
+  display: flex;
+
+  &--index {
+    min-height: 270px;
+    background-color: @bg-dark-blue;
   }
 }
 
@@ -21,4 +41,66 @@
   font-size: 24px;
   text-align: center;
   color: @text-white;
+}
+
+@media (min-width: @tablet-width) {
+  .intro--index {
+    padding-top: 70px;
+    min-height: 550px;
+    margin: 0 auto;
+
+    &::before {
+      bottom: 0;
+      right: 0;
+      width: 642px;
+      height: 550px;
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+      background-size: 700px 545px;
+    }
+  }
+
+  .intro__wrapper {
+    background-color: transparent;
+    min-height: 330px;
+
+    &--index {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+    }
+  }
+
+  .intro__text {
+    padding-top: 70px;
+
+    font-size: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro--index {
+    min-height: 674px;
+    margin: 0 auto;
+
+    &::before {
+      bottom: 0;
+      right: 0;
+      width: 800px;
+      height: 644px;
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+    }
+  }
+
+  .intro__wrapper {
+    min-height: 280px;
+
+    &--index {
+      margin: 0;
+    }
+  }
+
+  .intro__text {
+    padding-top: 60px;
+  }
 }

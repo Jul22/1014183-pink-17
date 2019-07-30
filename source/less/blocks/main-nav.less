@@ -1,11 +1,16 @@
-.main-nav {
-  .reset;
+.main-nav--opened {
+  display: block;
+}
 
-  background-color: @bg-dark-blue;
+.main-nav--closed {
+  display: none;
 }
 
 .main-nav__list {
   .reset-list;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .main-nav__item {
@@ -20,9 +25,26 @@
   padding-top: 17px;
   padding-bottom: 17px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   color: @bg-white;
   text-transform: uppercase;
+
+  &:not(&--active):hover,
+  &:not(&--active):focus {
+    color: #d22856;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 624px;
+  }
+
+  .main-nav__item {
+    border: none;
+  }
 }

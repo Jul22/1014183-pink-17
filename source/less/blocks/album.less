@@ -1,10 +1,36 @@
-.album {
-  .center;
+.album__slogan {
+  width: 280px;
+  margin: 0 auto;
+  padding: 48px 10px;
+  text-align: center;
 }
 
-.album__slogan {
-  padding: 50px 34px;
-  margin: 0;
+.album__container {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  text-align: center;
+@media (min-width: @tablet-width) {
+  .album__slogan {
+    width: 450px;
+  }
+
+  .album__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .album__slogan {
+    width: 600px;
+  }
+
+  .album__container {
+    width: 940px;
+    padding: 0 10px;
+  }
 }
