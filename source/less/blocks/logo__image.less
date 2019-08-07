@@ -1,0 +1,39 @@
+.logo__image--tablet,
+.logo__image--desktop {
+  display: none;
+}
+
+.logo__image--mobile {
+  color: @bg-white;
+
+  &:hover {
+    color: @bg-pink;
+  }
+
+  &:active {
+    color: @bg-white;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo__image--tablet {
+    display: block;
+
+    color: @bg-white;
+
+    &:hover {
+      color: @bg-pink;
+    }
+
+    &:active {
+      color: @bg-white;
+      opacity: 0.3;
+    }
+  }
+
+  .logo__image--mobile,
+  &--desktop {
+    display: none;
+  }
+}

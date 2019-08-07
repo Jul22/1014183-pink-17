@@ -1,7 +1,11 @@
 .contest-form__fieldset {
-  padding: 42px 20px 0 20px;
+  padding: 42px 20px 0;
 
   border: none;
+}
+
+.contest-form__fieldset-wrapper {
+  background-color: @bg-grey;
 }
 
 .contest-form__label {
@@ -9,6 +13,28 @@
 
   color: @text-pink;
   text-transform: uppercase;
+
+  &--impressions {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.contest-form__label-check {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 52px;
+
+  color: @text-dark-blue;
+  font-size: 18px;
+
+  &--radio {
+    margin-bottom: 45px;
+  }
 }
 
 .contest-form__input {
@@ -23,18 +49,35 @@
 
   border: 2px solid #e7e7e7;
   border-radius: 2px;
+
+  &--textarea {
+    width: 100%;
+    margin: 15px 0 0;
+    padding-bottom: 35px;
+
+    resize: none;
+  }
 }
 
 .contest-form__legend {
+  padding: 37px 20px 8px;
+
+  font-size: 14px;
   line-height: 18px;
   color: @text-pink;
   text-align: center;
   text-transform: uppercase;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .contest-form__inner-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
 
@@ -79,6 +122,7 @@
   .contest-form {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -100,6 +144,16 @@
 
   .contest-form__legend {
     padding: 0 24px;
+    margin: 0 auto;
+
+    &--hidden {
+      display: block;
+      padding: 0 30px;
+
+      &:first-of-type {
+        display: none;
+      }
+    }
   }
 
   .contest-form__submit-button {

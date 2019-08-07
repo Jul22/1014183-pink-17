@@ -5,11 +5,177 @@
 @media (min-width: @tablet-width) {
   .research {
     display: block;
+    position: relative;
+    padding: 60px 0;
+
+    /*background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+    background-position: 106px 56px;*/
+  }
+
+  .research__clocks__wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 177px;
+      height: 177px;
+
+      bottom: 30px;
+      left: 20px;
+
+      background-position: center;
+      background-color: @bg-white;
+      border: 12px solid @bg-pink;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "24";
+
+      left: 63px;
+      top: 89px;
+
+      font-size: 96px;
+      font-weight: 700;
+
+      color: @text-pink;
+    }
+  }
+
+  .research__clocks {
+    color: #dedede;
+    width: 238px;
+    height: 276px;
+  }
+
+  .research__block {
+    display: flex;
+    justify-content: space-between;
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 300px;
+
+    position: relative;
+
+    padding-left: 310px;
+
+    text-align: left;
+
+    /*&::before {
+      position: absolute;
+      content: "";
+
+      width: 177px;
+      height: 177px;
+
+      bottom: 0;
+      left: 20px;
+
+      background-position: center;
+      background-color: @bg-white;
+      border: 12px solid @bg-pink;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "24";
+
+      left: 63px;
+      top: 82px;
+
+      font-size: 96px;
+      font-weight: 700;
+
+      color: @text-pink;
+    }
+    */
+  }
+
+  .research__information {
+    width: 268px;
+  }
+
+  .research__title {
+    margin: 0 0 12px;
+    padding-top: 40px;
+    width: 170px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  .research__text {
+    margin: 0 0 18px;
+
+    line-height: 24px;
+  }
+
+  .research__link {
+    line-height: 24px;
+    color: @text-pink;
+    text-decoration: underline;
   }
 }
 
 @media (min-width: @desktop-width) {
   .research {
     background-color: #f2f2f2;
+  }
+
+  .research__clocks__wrapper {
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 220px;
+      height: 220px;
+
+      bottom: 30px;
+      left: 20px;;
+    }
+
+    &::after {
+      left: 63px;
+      top: 89px;
+
+      font-size: 120px;
+      font-weight: 700;
+
+      color: @text-pink;
+    }
+  }
+
+  .research__clocks {
+    color: #dedede;
+    width: 298px;
+    height: 345px;
+  }
+
+  .research__title {
+    width: 100%;
+    margin-bottom: 25px;
+
+    line-height: 30px;
+  }
+
+  .research__text {
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

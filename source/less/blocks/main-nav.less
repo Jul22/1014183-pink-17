@@ -1,50 +1,127 @@
-.main-nav--opened {
-  display: block;
+.main-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  background-color: @bg-dark-blue;
+
+  &--no-js {
+    & .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  &--closed {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    & .main-nav__list {
+      display: none;
+    }
+
+    & .main-nav__toggle {
+      display: block;
+    }
+  }
 }
 
-.main-nav--closed {
-  display: none;
+.main-nav__logo-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 22px 20px 25px;
+  width: 280px;
 }
 
 .main-nav__list {
-  .reset-list;
+  .reset-list();
+
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
+  flex-direction: column;
+
+  border-top: 1px solid #000000;
+  text-transform: uppercase;
 }
 
 .main-nav__item {
   text-align: center;
-
   border-top: 1px solid #485461;
   border-bottom: 1px solid #010101;
 }
 
 .main-nav__link {
   display: block;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  width: 100%;
+  padding: 15px 0;
+  color: @text-white;
 
-  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: @bg-white;
+  font-weight: bold;
   text-transform: uppercase;
 
-  &:not(&--active):hover,
-  &:not(&--active):focus {
-    color: #d22856;
+  &:hover {
+    color: @text-pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__logo-block {
+    width: 620px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__list {
+  .main-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .main-nav__wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 624px;
+    flex-wrap: nowrap;
+    width: 940px;
+    padding: 24px 10px;
+    margin: 0 auto;
+  }
+
+  .main-nav__logo-block {
+    padding: 0;
+    margin: 0;
+    width: 150px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    width: 620px;
   }
 
   .main-nav__item {
     border: none;
+  }
+
+  .main-nav__link {
+    padding: 10px 0;
+    text-transform: none;
+
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
   }
 }
