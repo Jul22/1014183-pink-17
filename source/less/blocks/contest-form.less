@@ -1,5 +1,5 @@
 .contest-form__fieldset {
-  padding: 42px 20px 0;
+  padding: 45px 20px 0;
 
   border: none;
 }
@@ -8,7 +8,9 @@
   background-color: @bg-grey;
 }
 
+
 .contest-form__label {
+  display: block;
   padding-left: 22px;
 
   color: @text-pink;
@@ -35,9 +37,26 @@
   &--radio {
     margin-bottom: 45px;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 35px;
+    height: 35px;
+
+    left: 0;
+    top: -9px;
+
+    background-color: @bg-white;
+    border: 2px solid #e5e5e5;
+    border-radius: 3px;
+  }
 }
 
 .contest-form__input {
+  display: block;
+  max-width: 280px;
   box-sizing: border-box;
   margin-top: 8px;
   margin-bottom: 22px;
@@ -57,6 +76,18 @@
 
     resize: none;
   }
+}
+
+.contest-form__checkbox,
+.contest-form__radio {
+  display: none;
+}
+
+.contest-form__checkbox:active + .contest-form__label-check::before,
+.contest-form__checkbox:checked + .contest-form__label-check::before {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contest-form__legend {
@@ -80,6 +111,7 @@
   align-items: flex-start;
   flex-wrap: nowrap;
 }
+
 
 .contest-form__impressions-wrapper {
   display: flex;
@@ -154,6 +186,30 @@
         display: none;
       }
     }
+  }
+
+  .contest-form__name {
+    order: 1;
+  }
+
+  .contest-form__fieldset-apps {
+    order: 2;
+  }
+
+  .contest-form__fieldset-contacts {
+    order: 3;
+  }
+
+  .contest-form__fieldset-adventures {
+    order: 4;
+  }
+
+  .contest-form__impressions-wrapper {
+    order: 5;
+  }
+
+  .contest-form__submit {
+    order: 6;
   }
 
   .contest-form__submit-button {

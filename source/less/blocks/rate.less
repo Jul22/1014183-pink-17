@@ -5,9 +5,10 @@
   align-items: center;
 
   background-color: @bg-grey;
-  background-image: url("../../img/bg-triangle-white.svg");
+  background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: center top;
+  overflow: hidden;
 }
 
 .rate__table {
@@ -61,8 +62,9 @@
   }
 
   &--hidden {
-    background-color: #f2f2f2;
-    border: none;
+    /*background-color: #f2f2f2;
+    border: none;*/
+    display: none;
   }
 }
 
@@ -113,6 +115,10 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .rate__toggles {
@@ -154,4 +160,108 @@
   border: 2px solid #283645;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .rate {
+    padding: 100px 0 70px;
+  }
+
+  .rate__name {
+    min-width: 156px;
+    height: 75px;
+    font-size: 16px;
+
+    &--hit::before {
+      width: 60px;
+      height: 60px;
+    }
+
+    &--hit::after {
+      top: 6px;
+      left: 6px;
+    }
+
+    &--hidden {
+      display: table-cell;
+      background-color: #f2f2f2;
+      border: none;
+    }
+  }
+
+  .rate__price {
+    font-size: 18px;
+  }
+
+  .rate__item {
+    min-width: 153px;
+    height: 46px;
+    font-size: 0;
+
+    &--no::after {
+      right: 61px;
+      top: 9px;
+    }
+
+    &--yes::after {
+      right: 61px;
+      top: 9px;
+    }
+
+    &--hidden {
+      display: table-cell;
+      font-size: 14px;
+    }
+  }
+
+  .rate__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rate {
+    padding: 150px 10px 100px;
+
+    background-image: url(../img/bg-triangle-white.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  .rate__name {
+    min-width: 234px;
+    height: 96px;
+    font-size: 18px;
+
+    &--hit::before {
+      width: 71px;
+      height: 71px;
+    }
+
+    &--hit::after {
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .rate__price {
+    font-size: 24px;
+    font-weight: lighter;
+  }
+
+  .rate__item {
+    min-width: 236px;
+    height: 60px;
+
+    &--no::after {
+      right: 103px;
+      top: 17px;
+    }
+
+    &--yes::after {
+      right: 101px;
+      top: 18px;
+    }
+  }
 }

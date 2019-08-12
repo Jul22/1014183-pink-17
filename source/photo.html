@@ -70,16 +70,16 @@
     </symbol>
     <symbol viewBox="0 0 48 48" id="icon-crop">
       <path fill="none" d="M0,0h48v48H0V0z"/>
-      <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+      <path fill="currentColor" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
     </symbol>
     <symbol viewBox="0 0 48 48"  id="icon-fill">
       <path fill="none" d="M0,0h48v48H0V0z"/>
-      <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
-      <rect y="40" width="48" height="3"/>
+      <path fill="currentColor" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+      <rect fill="currentColor" y="40" width="48" height="3"/>
     </symbol>
     <symbol viewBox="-35.422 -7.96 31.92 31.92" id="icon-contrast">
-      <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
-      <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+      <path fill="currentColor" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+      <path fill="currentColor" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
     </symbol>
   </svg>
 
@@ -104,8 +104,8 @@
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link main-nav__item--active">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Фотографии</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Конкурс</a>
@@ -247,22 +247,41 @@
       </picture>
       <form class="post-form" action="https://echo.htmlacademy.ru." method="post">
         <div class="post-form__filters-wrapper">
-          <input class="post-form__filter-toggle" type="radio" id="crop" name="filter1" checked>
-          <label class="post-form__label" for="crop"></label>
-          <input class="post-form__filter-toggle" type="radio" id="fill" name="filter1">
-          <label class="post-form__label" for="fill"></label>
-          <input class="post-form__filter-toggle" type="radio" id="contrast" name="filter1">
-          <label class="post-form__label" for="contrast"></label>
-          <div class="post-form__editing">
+
+          <div class="post-form__filters">
+            <input class="post-form__filter-toggle" type="radio" id="crop" name="filter1" checked>
+            <label class="post-form__label" for="crop">
+              <svg class="post-form__filter-icon" width="48" height="48">
+                <use xlink:href="#icon-crop"></use>
+              </svg>
+            </label>
             <input class="post-form__range" type="range" id="range-filter1" name="range-filter">
+          </div>
+
+          <div class="post-form__filters">
+            <input class="post-form__filter-toggle" type="radio" id="fill" name="filter1">
+            <label class="post-form__label" for="fill">
+              <svg class="post-form__filter-icon" width="48" height="48">
+                <use xlink:href="#icon-fill"></use>
+              </svg>
+            </label>
             <input class="post-form__range" type="range" id="range-filter2" name="range-filter">
+          </div>
+
+          <div class="post-form__filters">
+            <input class="post-form__filter-toggle" type="radio" id="contrast" name="filter1">
+            <label class="post-form__label" for="contrast">
+              <svg class="post-form__filter-icon post-form__filter-icon--contrast" width="32" height="32">
+                <use xlink:href="#icon-contrast"></use>
+              </svg>
+            </label>
             <input class="post-form__range" type="range" id="range-filter3" name="range-filter">
           </div>
-          <div class="post-form__submit-wrapper">
-            <button class="post-form__button post-form__button--post button" type="submit">Запостить</button>
-            <button class="post-form__button post-form__button--reset button" type="reset">Отмена</button>
-          </div>
         </div>
+            <div class="post-form__submit-wrapper">
+              <button class="post-form__button post-form__button--post button" type="submit">Запостить</button>
+              <button class="post-form__button post-form__button--reset button" type="reset">Отмена</button>
+          </div>
       </form>
       </div>
   </section>
@@ -273,7 +292,7 @@
     <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
   </a>
 
-  <div class="social">
+  <div class="footer__social">
     <a class="social__item" href="#">
       <span class="visually-hidden">Twitter</span>
       <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
@@ -308,5 +327,6 @@
     </a>
   </div>
 </footer>
+  <script src="js/app.js"></script>
 </body>
 </html>

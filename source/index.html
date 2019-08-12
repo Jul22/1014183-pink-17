@@ -73,6 +73,14 @@
   <path fill="currentColor" d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
   </symbol>
 
+  <symbol viewBox="0 0 21.706 41.719" id="left-button">
+  <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+  </symbol>
+
+  <symbol viewBox="0 0 21.706 41.719" id="right-button">
+  <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+  </symbol>
+
   <symbol viewBox="0 0 146.3 40.375" id="footer-logo-desktop">
     <g>
       <path fill="currentColor" d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z"/>
@@ -230,21 +238,48 @@
     </div>
   </section>
 
-  <section class="reviews container">
+  <section class="reviews container slider">
     <h2 class="visually-hidden">Отзывы</h2>
     <div class="reviews__wrapper slider slider--reviews">
-      <div class="reviews__list slider__list">
+      <div class="reviews__list reviews__list--active">
         <h4 class="reviews__author">Николай Петров<span class="reviews__author--character">25 лет, водитель трамвая</span></h4>
         <p class="reviews__text">
           «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
           познакомился со своей будущей женой в комментариях к выложенной фотографии!»
         </p>
       </div>
-      <p class="reviews__toggles">
-        <button class="slider__toggle slider__toggle--active" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
+      <div class="reviews__list">
+        <h4 class="reviews__author">Николай Петров<span class="reviews__author--character">25 лет, водитель трамвая</span></h4>
+        <p class="reviews__text">
+          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+          познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        </p>
+      </div>
+      <div class="reviews__list">
+        <h4 class="reviews__author">Николай Петров<span class="reviews__author--character">25 лет, водитель трамвая</span></h4>
+        <p class="reviews__text">
+          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+          познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        </p>
+      </div>
+      <button class="reviews__button reviews__button--left" type="button">
+        <svg class="reviews__button-icon" width="22" height="41">
+          <use xlink:href="#left-button"></use>
+        </svg>
+      </button>
+      <button class="reviews__button reviews__button--right" type="button">
+        <svg class="reviews__button-icon" width="22" height="41">
+          <use xlink:href="#right-button"></use>
+        </svg>
+      </button>
+      <div class="reviews__toggles">
+        <input class="reviews__radio" id="reviews-btn-4" type="radio" name="reviews-toggle" checked>
+        <label class="reviews__radio-bullet" for="reviews-btn-4" type="radio"></label>
+        <input class="reviews__radio" id="rate-btn-5" type="radio" name="reviews-toggle" >
+        <label class="reviews__radio-bullet" for="rate-btn-5" type="radio"></label>
+        <input class="reviews__radio" id="rate-btn-6" type="radio" name="reviews-toggle">
+        <label class="reviews__radio-bullet" for="rate-btn-6" type="radio"></label>
+      </div>
     </div>
   </section>
 
@@ -255,9 +290,9 @@
       <tbody>
         <tr>
           <th class="rate__name rate__name--hidden"></th>
-          <th class="rate__name">"База"<span class="rate__price">1,99 USD</span></th>
-          <th class="rate__name rate__name--hit">"Стандарт"<span class="rate__price">3,99 USD</span></th>
-          <th class="rate__name">"Анлим"<span class="rate__price">9,99 USD</span></th>
+          <th class="rate__name">База<span class="rate__price">1,99 USD</span></th>
+          <th class="rate__name rate__name--hit">Стандарт<span class="rate__price">3,99 USD</span></th>
+          <th class="rate__name">Анлим<span class="rate__price">9,99 USD</span></th>
         </tr>
         <tr>
           <td class="rate__item rate__item--hidden">Розовый фильтр</td>
@@ -266,13 +301,13 @@
           <td class="rate__item rate__item--yes">Розовый фильтр</td>
         </tr>
         <tr>
-          <td class="rate__item">Смайлики</td>
+          <td class="rate__item rate__item--hidden">Смайлики</td>
           <td class="rate__item rate__item--no">Смайлики</td>
           <td class="rate__item rate__item--yes">Смайлики</td>
           <td class="rate__item rate__item--yes">Смайлики</td>
         </tr>
         <tr>
-          <td class="rate__item">Комментарии</td>
+          <td class="rate__item rate__item--hidden">Комментарии</td>
           <td class="rate__item rate__item--no">Комментарии</td>
           <td class="rate__item rate__item--no">Комментарии</td>
           <td class="rate__item rate__item--yes">Комментарии</td>
@@ -313,12 +348,12 @@
   </section>
 </main>
 
-<footer class="footer container">
+<footer class="footer container footer--index">
   <a class="footer__logo logo" href="index.html">
     <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
   </a>
 
-  <div class="social">
+  <div class="footer__social">
     <a class="social__item" href="#">
       <span class="visually-hidden">Twitter</span>
       <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
