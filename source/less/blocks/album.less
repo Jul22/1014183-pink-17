@@ -1,8 +1,10 @@
 .album__slogan {
-  width: 280px;
+  width: 253px;
   margin: 0 auto;
-  padding: 48px 10px;
+  padding: 48px 0 50px;
+
   text-align: center;
+  line-height: 30px;
 }
 
 .album__container {
@@ -13,24 +15,22 @@
 
 @media (min-width: @tablet-width) {
   .album__slogan {
-    width: 450px;
+    width: 620px;
+    padding: 92px 50px 75px;
+
+    font-size: 18px;
   }
 
-  .album__container {
+  .album__posts {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 620px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .album__slogan {
     width: 600px;
-  }
-
-  .album__container {
-    width: 940px;
-    padding: 0 10px;
+    padding: 92px 170px 86px;
   }
 }

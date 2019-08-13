@@ -1,0 +1,267 @@
+.rate {
+  padding: 95px 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: @bg-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+.rate__table {
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+
+.rate__name {
+  box-sizing: border-box;
+  min-width: 280px;
+  height: 96px;
+
+  color: @text-white;
+  font-size: 18px;
+  text-align: center;
+
+  background-color: #283645;
+  border: 2px solid #283645;
+  border-right-color: #ffffff;
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 73px;
+      height: 70px;
+
+      top: -2px;
+      left: 0;
+
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      position: absolute;
+      content: "Хит";
+
+      top: 15px;
+      left: 10px;
+      transform: rotate(-45deg);
+
+      font-size: 14px;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+  }
+
+  &--hidden {
+    /*background-color: #f2f2f2;
+    border: none;*/
+    display: none;
+  }
+}
+
+.rate__price {
+  display: block;
+
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.rate__item {
+  position: relative;
+  min-width: 280px;
+  height: 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  background-color: @bg-white;
+  border: 2px solid #e5e5e5;
+
+  &--yes::after {
+    position: absolute;
+    content: "";
+
+    width: 27px;
+    height: 26px;
+
+    right: 19px;
+    top: 15px;
+
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-size: 27px 26px;
+    background-position: center;
+  }
+
+  &--no::after {
+    position: absolute;
+    content: "";
+
+    width: 27px;
+    height: 26px;
+
+    right: 19px;
+    top: 15px;
+
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.rate__toggles {
+  text-align: center;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rates__radio {
+  display: none;
+}
+
+.rates__radio-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  background-color: #bec2c7;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+  }
+}
+
+.rates__radio:checked + .rates__radio-bullet {
+  width: 11px;
+  height: 11px;
+  margin: 0 5px;
+  background-color: #ffffff;
+  border: 2px solid #283645;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .rate {
+    padding: 100px 0 70px;
+  }
+
+  .rate__name {
+    min-width: 156px;
+    height: 75px;
+    font-size: 16px;
+
+    &--hit::before {
+      width: 60px;
+      height: 60px;
+    }
+
+    &--hit::after {
+      top: 6px;
+      left: 6px;
+    }
+
+    &--hidden {
+      display: table-cell;
+      background-color: #f2f2f2;
+      border: none;
+    }
+  }
+
+  .rate__price {
+    font-size: 18px;
+  }
+
+  .rate__item {
+    min-width: 153px;
+    height: 46px;
+    font-size: 0;
+
+    &--no::after {
+      right: 61px;
+      top: 9px;
+    }
+
+    &--yes::after {
+      right: 61px;
+      top: 9px;
+    }
+
+    &--hidden {
+      display: table-cell;
+      font-size: 14px;
+    }
+  }
+
+  .rate__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rate {
+    padding: 150px 10px 100px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  .rate__name {
+    min-width: 234px;
+    height: 96px;
+    font-size: 18px;
+
+    &--hit::before {
+      width: 71px;
+      height: 71px;
+    }
+
+    &--hit::after {
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .rate__price {
+    font-size: 24px;
+    font-weight: lighter;
+  }
+
+  .rate__item {
+    min-width: 236px;
+    height: 60px;
+
+    &--no::after {
+      right: 103px;
+      top: 17px;
+    }
+
+    &--yes::after {
+      right: 101px;
+      top: 18px;
+    }
+  }
+}

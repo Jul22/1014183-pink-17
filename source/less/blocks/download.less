@@ -1,6 +1,45 @@
 .download {
   position: relative;
-  max-width: 280px;
+
+  color: #ffffff;
+}
+
+.download__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.download__slogan {
+  margin: 0;
+  width: 290px;
+  padding: 20px 0 320px 0;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: lighter;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 395px;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 257px 285px;
+  }
+}
+
+.download__inner-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,71 +47,114 @@
 
 .download__button {
   box-sizing: border-box;
-  width: 280px;
-  margin-bottom: 30px;
-  padding: 15px 0;
+  margin: 28px 0 32px;
+  padding: 15px 35px;
+  text-transform: none;
 
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
-  line-height: 18px;
   text-align: center;
-  color: #ffffff;
+  color: @text-white;
 
   border: 3px solid #ffffff;
   border-radius: 50px;
+
+  &:hover {
+    color: @text-pink;
+    background-color: @bg-white;
+  }
+
+  &:active {
+    color: rgba(@bg-pink, 0.3);
+  }
 }
 
 .download__list {
+  .reset-list;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  .reset-list;
-  width: 205px;
-  margin-bottom: 25px;
+  justify-content: center;
+  align-items: baseline;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.download__item {
+  display: flex;
+  margin: 0 17px;
+  align-items: flex-end;
 }
 
 .download__text {
-  padding-bottom: 32px;
+  margin: 0;
   width: 240px;
-
-  font-weight: 300;
-  line-height: 24px;
+  padding-bottom: 30px;
   text-align: center;
+
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 @media (min-width: @tablet-width) {
   .download {
-    margin: 0;
-    max-width: 300px;
-    padding: 75px 0 0 20px;
+    width: 620px;
+    padding: 75px 20px 0;
+    margin: 0 auto;
+
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+  }
+
+  .download__wrapper {
+    width: 300px;
+    padding: 0 320px 0 0;
   }
 
   .download__slogan {
-    width: 220px;
-    margin-bottom: 30px;
-  }
+    width: 190px;
+    padding-bottom: 30px;
 
-  .download__list {
-    padding-bottom: 40px;
+    font-size: 40px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .download__button {
-    width: 300px;
-    margin-bottom: 45px;
+    margin: 0 0 35px;
+  }
+
+  .download__list {
+    margin: 0 0 39px;
   }
 
   .download__text {
-    max-width: 300px;
+    width: 300px;
+    padding-bottom: 110px;
+  }
 
-    font-size: 18px;
-    line-height: 24px;
+  .download__block {
+    background-color: transparent;
   }
 }
 
 @media (min-width: @desktop-width) {
   .download {
-    padding: 95px 0 0 10px;
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: -30% 100%;
+  }
+
+  .download__wrapper {
+    width: 300px;
+    padding: 0 640px 14px 0;
   }
 
   .download__slogan {
@@ -89,6 +171,6 @@
   }
 
   .download__list {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 }

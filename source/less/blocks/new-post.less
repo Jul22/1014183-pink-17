@@ -1,10 +1,7 @@
-.new-post {
-  margin: 0 auto;
-  width: 320px;
-}
-
 .new-post__text {
   padding: 45px 20px;
+  margin: 0;
+
   line-height: 30px;
   color: @text-dark-blue;
   text-align: center;
@@ -15,12 +12,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .new-post {
-    width: 660px;
-  }
-
   .new-post__text {
-    padding: 57px 20px;
+    padding-bottom: 57px;
     font-size: 18px;
   }
 
@@ -31,9 +24,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .new-post {
-    width: 940px;
-    margin-bottom: 29px;
+  .new-post__text {
+    padding: 0 10px 50px;
   }
 
   .post-form__filters-wrapper {
