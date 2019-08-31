@@ -1,5 +1,5 @@
 .reviews {
-  padding: 40px 0 30px;
+  padding: 47px 0 9px;
 
   text-align: center;
 }
@@ -13,7 +13,8 @@
 }
 
 .reviews__author {
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 18px;
   font-weight: 700;
   font-size: 18px;
   color: #000000;
@@ -37,10 +38,12 @@
 
 .reviews__toggles {
   text-align: center;
-  margin-top: 25px;
+  padding-top: 35px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 70px;
+  margin: 0 auto;
 }
 
 .reviews__radio {
@@ -78,7 +81,7 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    padding: 30px 0 5px;
+    padding: 35px 0 0;
     position: relative;
   }
 
@@ -99,14 +102,15 @@
     &--character {
       display: block;
       order: 2;
-      margin-top: 8px;
+      margin-top: 12px;
+      margin-bottom: 23px;
       font-size: 14px;
       font-weight: 400;
     }
   }
 
   .reviews__text {
-    margin: 0 0 35px;
+    margin: 0 0 38px;
 
     max-width: 620px;
 
@@ -114,13 +118,13 @@
   }
 
   .reviews__toggles {
-    margin-top: 30px;
+    padding-top: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding: 180px 0 15px;
+    padding: 187px 0 44px;
   }
 
   .reviews__list {
@@ -135,22 +139,30 @@
       height: 63px;
 
       top: -115px;
-      left: 433px;
+      left: 50%;
 
       background-image: url("../img/icon-quotes.svg");
       background-repeat: no-repeat;
       background-position: center;
+      transform: translateX(-50%);
     }
   }
 
   .reviews__author {
-    margin-bottom: 5px;
+    margin-bottom: 0;
 
     font-size: 24px;
+
+    &--character {
+      margin: 7px 0 0;
+
+      font-size: 18px;
+    }
   }
 
   .reviews__text {
-    margin-bottom: 35px;
+    max-width: 100%;
+    margin-bottom: 37px;
   }
 
   .reviews__toggles {
@@ -164,7 +176,7 @@
     width: 28px;
     height: 50px;
 
-    top: 203px;
+    top: 210px;
 
     background-color: transparent;
     border: 0;
@@ -172,11 +184,24 @@
     cursor: pointer;
 
     &--left {
-      left: 10px;
+      left: 5px;
     }
 
     &--right {
       right: 10px;
+    }
+  }
+
+  .reviews__button-icon {
+    color: @bg-dark-blue;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
     }
   }
 }

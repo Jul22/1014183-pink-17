@@ -1,6 +1,7 @@
 .contest__promo {
-  padding: 45px 20px 0;
-  margin: 0;
+  padding: 45px 20px 40px;
+  width: 280px;
+  margin: 0 auto;
 
   text-align: center;
   font-weight: 400;
@@ -15,6 +16,7 @@
 @media (min-width: @tablet-width) {
   .contest__promo {
     padding: 92px 40px 0;
+    width: 510px;
     font-size: 18px;
 
     &--hidden {
@@ -25,9 +27,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contest {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
   .contest__promo {
-    padding-top: 100px;
-    margin: 0 60px;
+    width: 805px;
 
     &--hidden {
       margin: 0;

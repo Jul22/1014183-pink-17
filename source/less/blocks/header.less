@@ -2,47 +2,53 @@
   background-color: @bg-dark-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 320px 462px;
-  background-position: center 0;
+  background-position: center bottom -223px;
+
+  &--index {
+    background-position: center bottom 270px;
+  }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: 320px 462px;
-    background-position: center 0;
+    background-size: 320px auto;
   }
 }
 
-.header__title {
-  width: 230px;
-  padding: 30px 0 84px 0;
-  margin: 0  auto;
-  text-align: center;
+.header__title-wrapper {
+  min-height: 171px;
+}
 
-  color: @text-white;
+.header__title {
+  padding: 31px 20px 0;
+  margin: 0;
+
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 300;
+  text-align: center;
+  color: @text-white;
 }
 
 @media (min-width: @tablet-width) {
   .header {
-    background-color: @bg-dark-blue;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 1200px 729px;
-    background-position: 50% 0;
+    background-position: center bottom -290px;
+
+    &--index {
+      background-position: bottom;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: 1200px 729px;
-      background-position: 50% 0;
+      background-size: 1200px auto;
     }
   }
 
+  .header__title-wrapper {
+    min-height: 330px;
+  }
+
   .header__title {
-    width: 658px;
-    padding: 70px 0 100px 0;
+    padding-top: 70px;
 
     font-size: 50px;
   }
@@ -50,21 +56,24 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    background-color: @bg-dark-blue;
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 2560px 853px;
-    background-position: center 0;
+    background-position: top;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: 2560px 853px;
-      background-position: 50% 0;
+      background-size: 2500px auto;
     }
   }
 
+  .header__title-wrapper {
+    min-height: 285px;
+  }
+
   .header__title {
-    padding: 0 0 100px;
+    padding-top: 65px;
+
+    &--photo {
+      padding: 63px 170px 0;
+    }
   }
 }
