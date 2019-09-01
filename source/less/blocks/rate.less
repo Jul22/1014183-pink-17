@@ -13,6 +13,7 @@
 
 .rate__table {
   border-collapse: collapse;
+  background-color: #ffffff;
 }
 
 .rate__name {
@@ -87,15 +88,14 @@
   box-sizing: border-box;
   text-transform: uppercase;
 
-  background-color: @bg-white;
   border: 2px solid #e5e5e5;
 
   &--yes::before {
     position: absolute;
     content: "";
 
-    top: 62%;
-    left: 82%;
+    top: 61%;
+    left: 83%;
     width: 15px;
     height: 3px;
 
@@ -107,8 +107,8 @@
     position: absolute;
     content: "";
 
-    top: 52%;
-    left: 84%;
+    top: 54%;
+    left: 86%;
     width: 31px;
     height: 3px;
     background-color: #3dc644;
@@ -120,7 +120,7 @@
     content: "";
 
     width: 27px;
-    height: 26px;
+    height: 27px;
 
     right: 19px;
     top: 15px;
@@ -227,7 +227,7 @@
 
     &--yes::after {
       left: 44%;
-      top: 44%;
+      top: 40%;
     }
 
     &--hidden {
@@ -249,7 +249,7 @@
 
 @media (min-width: @desktop-width) {
   .rate {
-    padding: 149px 10px 92px;
+    padding: 168px 0 94px;
 
     background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
@@ -259,8 +259,8 @@
 
   .rate__name {
     min-width: 234px;
-    height: 96px;
-    padding: 7px 0 8px;
+    height: 98px;
+    padding: 5px 0 8px;
 
     font-size: 18px;
 
@@ -282,7 +282,7 @@
 
   .rate__item {
     min-width: 236px;
-    height: 62px;
+    height: 60px;
 
     &--hidden {
       font-size: 18px;
@@ -291,7 +291,7 @@
 
     &--no::after {
       right: 103px;
-      top: 17px;
+      top: 16px;
     }
 
     &--yes::before {
