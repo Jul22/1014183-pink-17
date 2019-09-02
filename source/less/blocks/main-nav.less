@@ -19,6 +19,10 @@
   display: none;
 }
 
+.main-nav--closed .main-navigation__toggle {
+  visibility: visible;
+}
+
 .main-nav__logo-block {
   display: flex;
   justify-content: space-between;
@@ -121,7 +125,7 @@
 @media (min-width: @tablet-width) {
   .main-nav__logo-block {
     width: 620px;
-    padding: 21px 20px 40px;
+    padding: 20px 20px 40px;
   }
 
   .main-navigation__toggle-image {

@@ -17,7 +17,7 @@ navToggle.addEventListener('click', function() {
 //form://
 
 var surName = document.querySelector('#sur-name');
-var Name = document.querySelector('#name');
+var name = document.querySelector('#name');
 var email = document.querySelector('#mail');
 var submit = document.querySelector('.contest-form__submit-button');
 var Success = document.querySelector('.popup-success');
