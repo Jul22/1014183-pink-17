@@ -1,10 +1,10 @@
 .contacts {
-  padding-top: 45px;
+  padding-top: 42px;
   text-align: center;
 }
 
 .contacts__title {
-  margin: 0 0 23px;
+  margin: 0 0 26px;
 
   font-size: 24px;
   font-weight: lighter;
@@ -22,7 +22,7 @@
 
 .contact__item {
   width: 250px;
-  padding: 11px 20px;
+  padding: 11px 20px 13px;
 }
 
 .contact__heading {
@@ -38,6 +38,10 @@
   color: @text-pink;
   font-size: 24px;
   font-weight: lighter;
+
+  &--tel {
+    display: block;
+  }
 
   &--link {
     &:hover {
@@ -86,9 +90,14 @@
 .contacts-map {
   width: 100%;
   margin: 0 auto;
+  border: 0;
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    padding: 44px 0 0;
+  }
+
   .contacts__title {
     padding: 0 55px;
     margin: 0 0 45px;
@@ -105,11 +114,11 @@
     padding: 0;
     margin-bottom: 50px;
 
-    &:nth-of-type(2) {
+    &--mail {
       margin-left: auto;
     }
 
-    &:nth-of-type(3) {
+    &--address {
       margin: 0 auto 30px;
     }
   }
@@ -160,17 +169,17 @@
   .contact__item {
     width: 240px;
 
-    &:nth-of-type(1) {
+    &--call {
       order: 1;
       margin: 0 79px 0 0;
     }
 
-    &:nth-of-type(2) {
+    &--mail {
       order: 3;
       margin: 0;
     }
 
-    &:nth-of-type(3) {
+    &--address {
       order: 2;
       margin: 0 81px 0 0;
     }

@@ -5,20 +5,26 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
-  <!-- Pixel Glass
+  <!--<link href="css/style.min.css" rel="stylesheet">-->
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+
   <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("img/pink-index-mobilep--pixel.png");
+      background-image: url("img/close-form-index.png");
     }
     /* Tablet */
     @media (min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url( "img/760.png" );
+        background-image: url( "img/close-form-tablet.png" );
       }
     }
     /* Desktop */
@@ -31,7 +37,7 @@
   </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
   <script src="../node_modules/pixel-glass/script.js"></script>
-   // Pixel Glass -->
+
   <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
@@ -201,9 +207,11 @@
 </header>
 <main class="main">
   <section class="contest">
-    <h2 class="contest__promo">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-      <span class="contest__promo contest__promo--hidden">Пожалуйста, заполните форму ниже:</span>
-    </h2>
+    <div class="contest__promo-block">
+      <h2 class="contest__promo">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="contest__promo contest__promo--hidden">Пожалуйста, заполните форму ниже:</span>
+      </h2>
+    </div>
     <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="contest-form__fieldset contest-form__name">
         <label class="contest-form__label" for="sur-name"><span class="contest-form__label-text">Фамилия:</span>

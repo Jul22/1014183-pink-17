@@ -1,6 +1,9 @@
+.contest {
+  box-sizing: border-box;
+}
+
 .contest__promo {
-  padding: 45px 20px 40px;
-  width: 280px;
+  padding: 45px 20px 42px;
   margin: 0 auto;
 
   text-align: center;
@@ -15,8 +18,8 @@
 
 @media (min-width: @tablet-width) {
   .contest__promo {
-    padding: 92px 40px 0;
-    width: 510px;
+    padding: 92px 60px 0;
+
     font-size: 18px;
 
     &--hidden {
@@ -33,8 +36,13 @@
     padding: 0 10px;
   }
 
+  .contest__promo-block {
+    margin: 0 50px;
+  }
+
   .contest__promo {
-    width: 805px;
+    margin: 0 auto;
+    padding: 92px 40px 0;
 
     &--hidden {
       margin: 0;

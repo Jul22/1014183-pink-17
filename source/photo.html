@@ -5,20 +5,26 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
-  <!-- Pixel Glass
+  <!-- <link href="css/style.min.css" rel="stylesheet">-->
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+
   <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("img/pink-index-mobilep--pixel.png");
+      background-image: url("img/photo-close-mobile.png");
     }
     /* Tablet */
     @media (min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url( "img/760.png" );
+        background-image: url("img/close-phone-tablet.png");
       }
     }
     /* Desktop */
@@ -31,7 +37,7 @@
   </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
   <script src="../node_modules/pixel-glass/script.js"></script>
-  // Pixel Glass -->
+
   <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
@@ -343,8 +349,8 @@
             <source type="imge/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
             <source type="imge/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
             <source media="(min-width:960px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
-            <source media="(min-width:660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
-            <img class="user-post__picture" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="фото поста">
+            <source media="(min-width:660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+            <img class="user-post__picture" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="фото поста">
           </picture>
         </a>
         <article class="user-post__caption">
@@ -368,14 +374,14 @@
             <source type="imge/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
             <source type="imge/webp" media="(min-width: 960px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
             <source type="imge/webp" media="(min-width: 960px)" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
-            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
             <img class="post-form__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Фото">
           </picture>
         </div>
         <form class="post-form" action="https://echo.htmlacademy.ru." method="post">
           <div class="post-form__filters-wrapper">
-            <div class="post-form__filters">
+            <div class="post-form__filters post-form__filters--crop">
               <input class="post-form__filter-toggle" type="radio" id="crop" name="filter1" checked>
               <label class="post-form__label post-form__label--active" for="crop">
                 <svg class="post-form__filter-icon post-form__filter-icon--active" width="48" height="48">
@@ -384,7 +390,7 @@
               </label>
               <input class="post-form__range" type="range" id="range-filter1" name="range-filter">
             </div>
-            <div class="post-form__filters">
+            <div class="post-form__filters post-form__filters--fill">
               <input class="post-form__filter-toggle" type="radio" id="fill" name="filter1">
               <label class="post-form__label" for="fill">
                 <svg class="post-form__filter-icon" width="48" height="48">
@@ -393,7 +399,7 @@
               </label>
               <input class="post-form__range post-form__range--hidden" type="range" id="range-filter2" name="range-filter">
             </div>
-            <div class="post-form__filters">
+            <div class="post-form__filters post-form__filters--contrast">
               <input class="post-form__filter-toggle" type="radio" id="contrast" name="filter1">
               <label class="post-form__label" for="contrast">
                 <svg class="post-form__filter-icon post-form__filter-icon--contrast" width="32" height="32">
