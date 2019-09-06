@@ -1,0 +1,38 @@
+.social__item {
+  position: relative;
+
+  display: block;
+  width: 45px;
+  height: 45px;
+
+  color: @bg-pink;
+
+  border: 3px solid rgba(@bg-dark-blue, 0.1);
+  border-radius: 50%;
+
+  &:hover {
+    border-color: @bg-dark-blue;
+  }
+
+  &:active {
+    color: rgba(@bg-pink, 0.3);
+    border-color: rgba(@bg-dark-blue, 0.1);
+  }
+}
+
+.social__item-image {
+  position: absolute;
+  content: "";
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: @desktop-width) {
+  .social__item {
+    margin-left: 12px;
+    margin-bottom: 3px;
+  }
+}

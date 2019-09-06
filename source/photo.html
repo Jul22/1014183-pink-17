@@ -4,40 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="css/style.css" rel="stylesheet">
-  <!-- <link href="css/style.min.css" rel="stylesheet">-->
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-  <link rel="preload" href="fonts/opensans.woff" as="font">
-  <link rel="preload" href="fonts/opensanslight.woff" as="font">
-  <link rel="preload" href="fonts/opensansbold.woff" as="font">
-
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/photo-close-mobile.png");
-    }
-    /* Tablet */
-    @media (min-width: 660px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("img/close-phone-tablet.png");
-      }
-    }
-    /* Desktop */
-    @media (min-width: 960px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("img/pink-photo-desktop--pixel.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-
   <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
@@ -172,7 +142,7 @@
   </symbol>
 </svg>
 <header class="header">
-  <nav class="main-nav main-nav--closed">
+  <nav class="main-nav main-nav--closed main-nav--no-js">
     <div class="main-nav__wrapper">
       <div class="main-nav__logo-block">
         <a class="main-nav__logo logo logo--header" href="index.html">
@@ -392,7 +362,7 @@
             </div>
             <div class="post-form__filters post-form__filters--fill">
               <input class="post-form__filter-toggle" type="radio" id="fill" name="filter1">
-              <label class="post-form__label" for="fill">
+              <label class="post-form__label post-form__label--fill" for="fill">
                 <svg class="post-form__filter-icon" width="48" height="48">
                   <use xlink:href="#icon-fill"></use>
                 </svg>
@@ -401,7 +371,7 @@
             </div>
             <div class="post-form__filters post-form__filters--contrast">
               <input class="post-form__filter-toggle" type="radio" id="contrast" name="filter1">
-              <label class="post-form__label" for="contrast">
+              <label class="post-form__label post-form__label--contrast" for="contrast">
                 <svg class="post-form__filter-icon post-form__filter-icon--contrast" width="32" height="32">
                   <use xlink:href="#icon-contrast"></use>
                 </svg>

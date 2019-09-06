@@ -4,39 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="css/style.css" rel="stylesheet">
-  <!--<link href="css/style.min.css" rel="stylesheet">-->
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-  <link rel="preload" href="fonts/opensans.woff" as="font">
-  <link rel="preload" href="fonts/opensanslight.woff" as="font">
-  <link rel="preload" href="fonts/opensansbold.woff" as="font">
-
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/close-form-index.png");
-    }
-    /* Tablet */
-    @media (min-width: 660px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url( "img/close-form-tablet.png" );
-      }
-    }
-    /* Desktop */
-    @media (min-width: 960px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("img/pink-form-desktop--pixel.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
 
   <script src="js/picturefill.min.js" async></script>
 </head>
@@ -159,7 +130,7 @@
   </symbol>
 </svg>
 <header class="header">
-  <nav class="main-nav main-nav--closed">
+  <nav class="main-nav main-nav--closed main-nav--no-js">
     <div class="main-nav__wrapper">
       <div class="main-nav__logo-block">
         <a class="main-nav__logo logo logo--header" href="index.html">
@@ -231,31 +202,31 @@
             <ul class="contest-form__adventures-column">
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="shark" name="shark" checked>
-                <label class="contest-form__label-check" for="shark">Сделал селфи с акулой</label>
+                <label class="contest-form__label-check" for="shark" tabindex="0">Сделал селфи с акулой</label>
               </li>
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="sun-burned" name="sun-burned" checked>
-                <label class="contest-form__label-check" for="sun-burned">Обгорел на пляже</label>
+                <label class="contest-form__label-check" for="sun-burned" tabindex="0">Обгорел на пляже</label>
               </li>
             </ul>
             <ul class="contest-form__adventures-column">
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="chuck" name="chuck">
-                <label class="contest-form__label-check" for="chuck">Видел Чака Норриса</label>
+                <label class="contest-form__label-check" for="chuck" tabindex="0">Видел Чака Норриса</label>
               </li>
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="gifts" name="gifts">
-                <label class="contest-form__label-check" for="gifts">Накупил сувениров</label>
+                <label class="contest-form__label-check" for="gifts" tabindex="0">Накупил сувениров</label>
               </li>
             </ul>
             <ul class="contest-form__adventures-column">
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="tower" name="tower" checked>
-                <label class="contest-form__label-check" for="tower">Удержал башню</label>
+                <label class="contest-form__label-check" for="tower" tabindex="0">Удержал башню</label>
               </li>
               <li class="contest-form__adventures-item">
                 <input class="contest-form__checkbox" type="checkbox" id="hotel" name="hotel">
-                <label class="contest-form__label-check" for="hotel">Разгромил отель</label>
+                <label class="contest-form__label-check" for="hotel" tabindex="0">Разгромил отель</label>
               </li>
             </ul>
           </div>
@@ -281,11 +252,11 @@
           <legend class="contest-form__legend">С каким приложением путешествовали?</legend>
           <div class="contest-form__inner-wrapper">
             <input class="contest-form__radio" type="radio" id="ios" name="radio" checked>
-            <label class="contest-form__label-radio" for="ios">Pink для iOS</label>
+            <label class="contest-form__label-radio" for="ios" tabindex="0">Pink для iOS</label>
             <input class="contest-form__radio" type="radio" id="android" name="radio">
-            <label class="contest-form__label-radio" for="android">Pink на Android</label>
+            <label class="contest-form__label-radio" for="android" tabindex="0">Pink на Android</label>
             <input class="contest-form__radio" type="radio" id="windows" name="radio">
-            <label class="contest-form__label-radio" for="windows">Windows Phone</label>
+            <label class="contest-form__label-radio" for="windows" tabindex="0">Windows Phone</label>
           </div>
         </fieldset>
       </div>
@@ -355,7 +326,7 @@
   <h2 class="popup__heading">Что-то пошло не так!</h2>
   <p class="popup__text popup__text--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
   <div class="popup__button-wrap popup__button-wrap--error">
-    <button class="popup__button popup__button-error button">ОК</button>
+    <button class="popup__button popup__button--error button">ОК</button>
   </div>
 </div>
 <script src="js/app.js"></script>
