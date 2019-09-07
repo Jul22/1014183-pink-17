@@ -16,26 +16,17 @@ navToggle.addEventListener('click', function() {
 
 //form://
 
+
 var surName = document.querySelector('#sur-name');
 var name = document.querySelector('#name');
 var email = document.querySelector('#mail');
 var submit = document.querySelector('.contest-form__submit-button');
-var Success = document.querySelector('.popup-success');
-var Error = document.querySelector('.popup-error');
-var Close = document.querySelector('.popup__button');
 
-submit.addEventListener("click", function(event){
-  event.preventDefault();
-  if (surName.value && Name.value && email.value){
-    Success.classList.add('popup-success--alert');
+submit.addEventListener('click', function(evt){
+  if (!surName.value && !name.value && !email.value){
+    alert('Заполните поля выделенные красным');
   }
-  else{
-    Error.classList.add('popup-error--alert');
+  else {
+    alert('Успешно отправлены');
   }
-});
-
-Close.addEventListener("click", function(event){
-  event.preventDefault();
-  Success.classList.remove('popup-success--alert');
-  Error.classList.remove('popup-error--alert');
 });
