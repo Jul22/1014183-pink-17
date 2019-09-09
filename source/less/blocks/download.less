@@ -36,7 +36,7 @@
   margin: 0 0 343px;
 
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 300;
   text-align: center;
   color: #ffffff;
 }
@@ -64,6 +64,7 @@
 
   &:active {
     color: rgba(@bg-pink, 0.3);
+    background-color: @bg-white;
   }
 }
 
@@ -93,7 +94,7 @@
 
   font-size: 14px;
   line-height: 24px;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 @media (min-width: @tablet-width) {
@@ -148,9 +149,13 @@
 
 @media (min-width: @desktop-width) {
   .download {
-    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-image: none;
+  }
+
+  .download__block {
+    background-image: url(../img/iphone-hand-desktop@1x.png);
+    background-position: 25px bottom;
     background-repeat: no-repeat;
-    background-position: 26px bottom;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-hand-desktop@2x.png");

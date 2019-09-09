@@ -1,5 +1,5 @@
 .rate {
-  padding: 125px 0 47px;
+  padding: 127px 0 47px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
 .rate__name {
   box-sizing: border-box;
   min-width: 280px;
-  padding: 19px  0 20px;
+  padding: 17px  0 22px;
 
   color: @text-white;
   font-size: 18px;
@@ -73,28 +73,35 @@
   }
 }
 
+.rate__item-text {
+  line-height: 30px;
+}
+
 .rate__price {
   display: block;
 
   font-size: 24px;
-  font-weight: lighter;
+  line-height: 30px;
+  font-weight: 300;
 }
 
 .rate__item {
   position: relative;
   min-width: 255px;
-  padding: 22px 23px 21px;
+  padding: 13px 23px 17px;
   box-sizing: border-box;
   text-transform: uppercase;
 
   border: 2px solid #e5e5e5;
 
+  line-height: 30px;
+
   &--yes::before {
     position: absolute;
     content: "";
 
-    top: 60%;
-    left: 82%;
+    top: 32px;
+    left: 226px;
     width: 15px;
     height: 3px;
 
@@ -106,8 +113,8 @@
     position: absolute;
     content: "";
 
-    top: 50%;
-    left: 84%;
+    top: 27px;
+    left: 233px;
     width: 31px;
     height: 3px;
     background-color: #3dc644;
@@ -136,21 +143,21 @@
 
 .rate__toggles {
   text-align: center;
-  margin-top: 38px;
-  width: 70px;
+  margin: 38px auto 0;
+  width: 73px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.rates__radio {
+.rate__radio {
   display: none;
 }
 
-.rates__radio-bullet {
+.rate__radio-bullet {
   display: inline-block;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   margin: 0 5px;
   background-color: #bec2c7;
   border: 3px solid transparent;
@@ -166,24 +173,24 @@
   }
 }
 
-.rates__radio:checked + .rates__radio-bullet {
-  width: 11px;
-  height: 11px;
+.rate__radio:checked + .rate__radio-bullet {
+  width: 6px;
+  height: 6px;
   margin: 0 5px;
   background-color: #ffffff;
-  border: 2px solid #283645;
+  border: 3px solid #283645;
   border-radius: 50%;
   cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .rate {
-    padding: 106px 20px 70px;
+    padding: 108px 20px 68px;
   }
 
   .rate__name {
     min-width: 155px;
-    padding: 13px 0 7px;
+    padding: 13px 0 8px;
     font-size: 16px;
 
     &--hit::before {
@@ -211,6 +218,7 @@
 
   .rate__item {
     min-width: 155px;
+    padding: 10px 25px 6px;
     height: 46px;
     font-size: 0;
 
@@ -220,18 +228,19 @@
     }
 
     &--yes::before {
-      top: 58%;
-      left: 40%;
+      top: 26px;
+      left: 61px;
     }
 
     &--yes::after {
-      left: 45%;
-      top: 45%;
+      left: 68px;
+      top: 20px;
     }
 
     &--hidden {
       display: table-cell;
       font-size: 14px;
+      line-height: 30px;
       text-transform: none;
       padding: 0 15px;
     }
@@ -248,7 +257,7 @@
 
 @media (min-width: @desktop-width) {
   .rate {
-    padding: 149px 0 94px;
+    padding: 165px 0 97px;
 
     background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
@@ -294,13 +303,13 @@
     }
 
     &--yes::before {
-      top: 60%;
-      left: 43%;
+      top: 32px;
+      left: 100px;
     }
 
     &--yes::after {
-      left: 46%;
-      top: 48%;
+      left: 107px;
+      top: 27px;
     }
   }
 }
